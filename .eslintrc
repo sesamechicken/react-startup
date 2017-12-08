@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/no-unescaped-entities": "off",
+    "comma-dangle": "off",
+    "import/prefer-default-export": "off",
+    "arrow-body-style": "off",
+    "react/prop-types": "off",
+    "no-underscore-dangle": "off"
+  }
+}
