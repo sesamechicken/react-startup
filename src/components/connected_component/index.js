@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import actions from '../../redux/actions';
 
 export class ConnectedComponentExample extends React.Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       inputValue: ''
@@ -11,25 +11,26 @@ export class ConnectedComponentExample extends React.Component {
   }
 
   onKeyUp = (e) => {
-    const value = e.target.value;
+    const { value } = e.target;
     e.persist();
-    this.setState({inputValue: value});
+    this.setState({ inputValue: value });
 
     // A little overboard; I'm looking for the ENTER key
-    if(e.keyCode === 13){
-      this.addListItem()
-      e.target.value = ''
+    if (e.keyCode === 13) {
+      this.addListItem();
+      e.target.value = '';
     }
   }
 
   addListItem = () => {
-    const newItem = this.state.inputValue;
+    const { inputValue } = this.state;
+    const { addToList } = this.props;
 
-    this.props.addToList(newItem);
-    this.setState({ inputValue: ''})
+    addToList(inputValue);
+    this.setState({ inputValue: '' });
   }
 
-  render(){
+  render() {
     const { items } = this.props;
 
     return (
@@ -37,22 +38,20 @@ export class ConnectedComponentExample extends React.Component {
         <div>
           <h2>redux</h2>
           This repo has been updated to include an instance of redux. If your
-          components depend on it, they can use it as they see fit. For now, it's just 
+          components depend on it, they can use it as they see fit. For now, it's just
           your grandma's shopping list.
         </div>
         <ul>
-          { items.map((item, indx) => 
-            <li key={indx}>{item}</li>
-          )}
+          { items.map((item, indx) => <li key={`${item + indx}`}>{item}</li>)}
         </ul>
-        <input type='text' onKeyUp={(e) => this.onKeyUp(e)} placeholder='Add to her list' /> <button onClick={() => this.addListItem()}>Add</button>
+        <input type="text" onKeyUp={(e) => this.onKeyUp(e)} placeholder="Add to her list" />
+        <button type="button" onClick={() => this.addListItem()}>Add</button>
       </React.Fragment>
     );
-  };
-};
+  }
+}
 
-
-const mapStateToProps = ({items = ''}) => {
+const mapStateToProps = ({ items = '' }) => {
   return {
     items
   };
