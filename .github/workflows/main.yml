@@ -20,6 +20,7 @@ jobs:
       - name: Install and Build
         run: |
           yarn
+          yarn lint
           yarn build
       
       - name: Deploy 🚀
