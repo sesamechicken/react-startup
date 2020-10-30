@@ -10,7 +10,7 @@ export class ConnectedComponentExample extends React.Component {
     };
   }
 
-  onChange = (e) => {
+  onKeyUp = (e) => {
     const value = e.target.value;
     e.persist();
     this.setState({inputValue: value});
@@ -45,7 +45,7 @@ export class ConnectedComponentExample extends React.Component {
             <li key={indx}>{item}</li>
           )}
         </ul>
-        <input type='text' onKeyUp={(e) => this.onChange(e)} placeholder='Add to her list' /> <button onClick={() => this.addListItem()}>Add</button>
+        <input type='text' onKeyUp={(e) => this.onKeyUp(e)} placeholder='Add to her list' /> <button onClick={() => this.addListItem()}>Add</button>
       </React.Fragment>
     );
   };

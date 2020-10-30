@@ -1,14 +1,14 @@
-import React, { Component} from 'react';
+import React from 'react';
 import Example from './components/example';
-import ConnectedComponentExample from './components/connected_component';
-import styles from './app.css';
+import ConnectedComponent from './components/connected_component';
+import './app.css';
 
-class App extends Component{
-  render(){
-    return(
-      <div className="App">
+class App extends React.PureComponent {
+  render() {
+    return (
+      <div>
         <Example />
-        <ConnectedComponentExample />
+        <ConnectedComponent />
       </div>
     );
   }

@@ -2,15 +2,16 @@
   "name": "react_starter_app",
   "version": "1.0.0",
   "description": "A React starter for quick app dev",
-  "author": "chris dickow",
+  "author": "chris dickow (sesamechicken)",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/sesamechicken/react-startup.git"
+    "type": "git",
+    "url": "https://github.com/sesamechicken/react-startup.git"
   },
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --mode=production"
+    "lint": "eslint ./src/**.js",
+    "build": "webpack"
   },
   "dependencies": {
     "react": "^16.12.0",
@@ -22,20 +23,24 @@
   "devDependencies": {
     "@babel/cli": "7.1.0",
     "@babel/core": "7.1.0",
-    "@babel/preset-env": "7.1.0",
-    "@babel/preset-react": "7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-optional-chaining": "7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "7.1.0",
+    "@babel/preset-react": "7.0.0",
     "@webpack-cli/serve": "^0.2.0",
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
     "css-modules": "^0.3.0",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.4",
-    "eslint-plugin-react-hooks": "3.0.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.0.4",
     "mini-css-extract-plugin": "^0.9.0",
