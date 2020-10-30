@@ -1,33 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import store from './redux/store';
 import { Provider } from 'react-redux';
-import { createStore, compose, applyMiddleware } from 'redux';
-import { middleware as reduxPack } from 'redux-pack';
-import reducers from './redux/reducers';
-import './index.css';
-import App from './App/';
-import registerServiceWorker from './registerServiceWorker';
+import App from './App.js';
 
-const devTools =
-  typeof window !== 'undefined' &&
-  window.__REDUX_DEVTOOLS_EXTENSION__ &&
-  window.__REDUX_DEVTOOLS_EXTENSION__();
-
-
-const store = createStore(
-  reducers,
-  compose(
-    applyMiddleware(reduxPack),
-    devTools
-  )
-);
-
-// We tell react to render the App component inside the div with the id of 'root'
+if (module.hot) {
+  module.hot.accept()
+}
 ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>
-, document.getElementById('root')); // eslint-disable-line no-undef
-
-// Caching layer for prod deployment. https://goo.gl/KwvDNy
-registerServiceWorker();
+  </Provider>, 
+  document.getElementById("root")
+);
