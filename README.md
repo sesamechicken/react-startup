@@ -1,4 +1,4 @@
-[![Requirements Status](https://requires.io/github/sesamechicken/react-startup/requirements.svg?branch=gh-pages)](https://requires.io/github/sesamechicken/react-startup/requirements/?branch=gh-pages)
+[![Requirements Status](https://requires.io/github/sesamechicken/react-startup/requirements.svg?branch=master)](https://requires.io/github/sesamechicken/react-startup/requirements/?branch=master)
 
 # Starter React App
 
