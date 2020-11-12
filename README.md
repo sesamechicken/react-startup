@@ -1,3 +1,5 @@
+[![Requirements Status](https://requires.io/github/sesamechicken/react-startup/requirements.svg?branch=gh-pages)](https://requires.io/github/sesamechicken/react-startup/requirements/?branch=gh-pages)
+
 # Starter React App
 
 Vanilla React app that can be hosted easily on Github or your server!
