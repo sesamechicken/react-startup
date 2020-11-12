@@ -9,3 +9,8 @@ global.render = enzyme.render;
 global.mount = enzyme.mount;
 global.toJson = enzyme.toJson;
 global.update = enzyme.update;
+
+// If we have an unhandled promise rejection, now we know where and can fix it
+process.on('unhandledRejection', (error) => {
+  throw error;
+});
