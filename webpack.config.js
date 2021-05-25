@@ -15,6 +15,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     historyApiFallback: true,
+    writeToDisk: true,
     compress: true,
     port: 8080,
     open: 'Google Chrome',

@@ -13,5 +13,6 @@ Vanilla React app that can be hosted easily on Github or your server!
 
 ```js
 yarn dev // run in dev mode. You want this.
+yarn test // run the unit tests with Jest 🃏
 yarn build // ...build it.
 ```
