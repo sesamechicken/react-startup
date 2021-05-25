@@ -4,6 +4,13 @@
   "env":{
     "browser": true
   },
+  "globals": {
+    "describe": true,
+    "shallow": true,
+    "mount": true,
+    "it": true,
+    "expect": true
+  },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "jsx-a11y/href-no-hash": "off",
